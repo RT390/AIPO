@@ -9,7 +9,7 @@ app = FastAPI(title="YouTube Downloader API")
 
 # إعدادات Proxy (اختياري - للاستضافة على Render)
 PROXY_URL = os.getenv("PROXY_URL", None)  # مثال: http://user:pass@host:port
-COOKIES_FILE = os.getenv("COOKIES_FILE", "cookies.txt")
+COOKIES_FILE = os.getenv("COOKIES_FILE", "/etc/secrets/cookies.txt")
 
 
 def get_ydl_opts(format_id: Optional[str] = None, download: bool = False):
